@@ -62,6 +62,8 @@ A snapshot of the weights and models induclded in the VotingEnsemble can be foun
  'verbose': -10,
  'verbosity': 0}
 
+Documentation outlining the above XGBoost parameters can be found here: https://xgboost.readthedocs.io/en/latest/parameter.html. Notice that L2 regularisation has been increased fairly substantially. This is a good sign as it suggests the best models selected by AutoML are not simply those which are most overfit. 
+
 ## Pipeline comparison
 **Compare the two models and their performance. What are the differences in accuracy? In architecture? If there was a difference, why do you think there was one?**
 
