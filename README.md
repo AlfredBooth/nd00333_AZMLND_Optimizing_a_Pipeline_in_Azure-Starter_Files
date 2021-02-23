@@ -34,8 +34,38 @@ In total 48 different classification pipelines were run of which a VotingEnsembl
 
 A snapshot of the weights and models induclded in the VotingEnsemble can be found in the notebook provided in this repository. As an example, we can see that model 37 was given the greatest wieght in our ensemble and was a Sparse Normalizer XGBoost classifier with the following parameters:
 
+{'base_score': 0.5,
+ 'booster': 'gbtree',
+ 'colsample_bylevel': 1,
+ 'colsample_bynode': 1,
+ 'colsample_bytree': 0.9,
+ 'eta': 0.01,
+ 'gamma': 0,
+ 'learning_rate': 0.1,
+ 'max_delta_step': 0,
+ 'max_depth': 4,
+ 'max_leaves': 0,
+ 'min_child_weight': 1,
+ 'missing': nan,
+ 'n_estimators': 100,
+ 'n_jobs': -1,
+ 'nthread': None,
+ 'objective': 'reg:logistic',
+ 'random_state': 0,
+ 'reg_alpha': 1.0416666666666667,
+ 'reg_lambda': 0.7291666666666667,
+ 'scale_pos_weight': 1,
+ 'seed': None,
+ 'silent': None,
+ 'subsample': 1,
+ 'tree_method': 'auto',
+ 'verbose': -10,
+ 'verbosity': 0}
+
 ## Pipeline comparison
 **Compare the two models and their performance. What are the differences in accuracy? In architecture? If there was a difference, why do you think there was one?**
+
+Although AutoML performed better in this case, both approaches were able to quickly iterate through many model variations to return similarly strong perfomance. Perhaps the reason AutoML came out on top in this case was due to our implamentation of Hyperdrive being limited to only testing Logistic Regression, emphasising the value of AutoML for early stage model selection and time saving. 
 
 ## Future work
 
